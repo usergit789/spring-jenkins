@@ -1,5 +1,6 @@
 package com.example.springjenkins;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,13 +10,12 @@ import java.util.logging.Logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
+@Slf4j
 class SpringJenkinsApplicationTests {
-
-	public static Logger logger = (Logger) LoggerFactory.getLogger(SpringJenkinsApplicationTests.class);
 
 	@Test
 	void contextLoads() {
-		logger.info("test case executing");
+		log.info("test case executing");
 		assertEquals(true,true);
 	}
 
